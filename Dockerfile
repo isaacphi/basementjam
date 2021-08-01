@@ -15,7 +15,7 @@ COPY . ${PROJECT_DIR}
 
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 RUN poetry self update
-RUN poetry install
+RUN poetry install --no-dev
 
 
 EXPOSE 8000

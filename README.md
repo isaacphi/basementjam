@@ -1,6 +1,14 @@
 # basementjam
 
-Run `make` to see options for local dev.
+Requirements:
+* python 3.9
+* poetry
+* docker, docker-compose
+
+To get started:
+* `make install`
+* `make start`
+
 
 # License
 

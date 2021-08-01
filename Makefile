@@ -21,6 +21,10 @@ help:
 build:
 > docker-compose build
 
+.PHONY: install
+install:
+> poetry install --remove-untracked
+
 .PHONY: start
 start:
 > docker-compose up -d

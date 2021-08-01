@@ -12,8 +12,6 @@ ifeq ($(origin .RECIPEPREFIX), undefined)
 endif
 .RECIPEPREFIX = >
 
-
-# Default
 .PHONY: help
 help:
 > @echo "Basementjam"
@@ -32,6 +30,13 @@ stop:
 > docker-compose down
 
 .PHONY: restart
-stop:
+restart:
 > docker-compose restart
 
+.PHONY: shell
+shell: start
+> docker-compose exec web sh
+
+.PHONY: logs
+logs: start
+> docker-compose logs -f web
